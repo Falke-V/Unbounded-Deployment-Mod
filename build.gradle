@@ -84,23 +84,16 @@ jar {
     }
 }
 
-tasks.register('deploy', Jar) {
+tasks.register('deploy', Jar){
     def projectName = project.name
+    dependsOn jarAndroid
     dependsOn jar
-    // dependsOn jarAndroid
     archiveFileName = "${projectName}.jar"
 
-    from { 
-        // Если собираем только для ПК, то zipTree для Android-файла можно убрать
-        def libs = [zipTree("build/libs/${projectName}Desktop.jar")]
-        if (new File("build/libs/${projectName}Android.jar").exists()) {
-            libs.add(zipTree("build/libs/${projectName}Android.jar"))
-        }
-        return libs
-    }
+    from{ [zipTree("build/libs/${projectName}Desktop.jar"), zipTree("build/libs/${projectName}Android.jar")] }
 
-    doLast {
-        delete {
+    doLast{
+        delete{
             delete "build/libs/${projectName}Android.jar"
         }
     }
