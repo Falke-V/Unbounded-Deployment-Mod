@@ -1,0 +1,26 @@
+displayName: "Unbounded Deployment"
+
+name: "unbounded-deployment"
+
+author: "FalkeV"
+
+main: "coremod.Main"
+
+description: 
+'''
+Adds new Serpulo campaign core(s) with greater available deployment scheme sizes (no longer 15x15 maximum).
+Current list of new core(s) and characteristics:
++----------------+---------+
+| Name           | Centrum |
+| Size           | 5x5     |
+| Capacity       | 13 000  |
+| Unit Limit     | +24     |
+| Core Unit      | Gamma   |
+| Size of scheme | 19x19   |
++----------------+---------+
+[green](new cores in development)[]
+'''
+
+version: "1.0"
+minGameVersion: "159.1"
+java: true
