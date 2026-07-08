@@ -21,6 +21,6 @@ Current list of new core(s) and characteristics:
 [green](new cores in development)[]
 '''
 
-version: "1.0"
+version: "2.0"
 minGameVersion: "159.1"
 java: true
