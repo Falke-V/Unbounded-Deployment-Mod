@@ -39,7 +39,7 @@ public class CustomBlocks {
             ((CustomCoreBlock)this).schematicLimit = 19; 
 
             // for testing comment
-            researchCostMultiplier = 4f;
+            // researchCostMultiplier = 4f;
             
             // for testing uncomment
             // alwaysUnlocked = true;
@@ -52,7 +52,14 @@ public class CustomBlocks {
         var parentNode = TechTree.all.find(nodes -> nodes.content == mindustry.content.Blocks.coreNucleus);
         
         if(parentNode != null) {
-            var centrumNode = TechTree.node(coreCentrum);
+            var centrumNode = TechTree.node(coreCentrum, ItemStack.with(
+                mindustry.content.Items.copper, 40000,
+                mindustry.content.Items.lead, 40000,
+                mindustry.content.Items.silicon, 32500,
+                mindustry.content.Items.thorium, 32500,
+                mindustry.content.Items.phaseFabric, 32500,
+                mindustry.content.Items.surgeAlloy, 32500
+            ), () -> {});
             parentNode.children.add(centrumNode);
         }
     }
