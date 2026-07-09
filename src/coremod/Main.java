@@ -12,6 +12,9 @@ public class Main extends Mod {
     @Override
     public void loadContent() {
         CustomBlocks.load();
+
+        // for testing comment
+        CustomBlocks.setupTechTree();
     }
 
     @Override
@@ -33,9 +36,6 @@ public class Main extends Mod {
             customSchematicsManager.load();
             // change global schematic manager to custom
             Vars.schematics = customSchematicsManager;
-
-            // for testing comment
-            CustomBlocks.setupTechTree();
 
             Log.info("new scheme filter set");
         } catch (Exception e) {

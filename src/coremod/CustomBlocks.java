@@ -14,7 +14,7 @@ public class CustomBlocks {
 
     public static void load() {
         coreCentrum = new CustomCoreBlock("core-centrum") {{
-            // to be changed
+            // to be changed, for testing comment
             requirements(Category.effect, ItemStack.with(
                 Items.copper, 8000,
                 Items.lead, 8000, 
@@ -48,11 +48,12 @@ public class CustomBlocks {
 
     // for testing comment
     public static void setupTechTree() {
-        var nucleusNode = TechTree.all.find(node -> node.content == Blocks.coreNucleus);
+        // mechanicalDrill
+        var parentNode = TechTree.all.find(nodes -> nodes.content == mindustry.content.Blocks.coreNucleus);
         
-        if(nucleusNode != null) {
-            TechTree.TechNode centrumNode = new TechTree.TechNode(nucleusNode, coreCentrum, null);
-            nucleusNode.children.add(centrumNode);
+        if(parentNode != null) {
+            var centrumNode = TechTree.node(coreCentrum);
+            parentNode.children.add(centrumNode);
         }
     }
 }
