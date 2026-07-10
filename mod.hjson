@@ -18,9 +18,9 @@ Current list of new core(s) and characteristics:
 | Core Unit      | Gamma   |
 | Size of scheme | 19x19   |
 +----------------+---------+
-[green](new cores in development)[]
+[green]new cores in development[]
 '''
 
-version: "2.0"
+version: "1.0"
 minGameVersion: "159.1"
 java: true
