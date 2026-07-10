@@ -1,4 +1,4 @@
-package coremod;
+package unboundeddeployment.content;
 
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
@@ -8,12 +8,13 @@ import mindustry.content.UnitTypes;
 import mindustry.content.TechTree;
 import mindustry.content.Planets;
 import mindustry.world.Block;
+import unboundeddeployment.content.blocks.UDCoreBlock;
 
-public class CustomBlocks {
+public class UDBlocks {
     public static Block coreCentrum;
 
     public static void load() {
-        coreCentrum = new CustomCoreBlock("core-centrum") {{
+        coreCentrum = new UDCoreBlock("core-centrum") {{
             // to be changed, for testing comment
             requirements(Category.effect, ItemStack.with(
                 Items.copper, 8000,
@@ -36,7 +37,7 @@ public class CustomBlocks {
             shownPlanets.add(Planets.serpulo);
 
             // main new mechanic parameter
-            ((CustomCoreBlock)this).schematicLimit = 19; 
+            ((UDCoreBlock)this).schematicLimit = 19; 
 
             // for testing comment
             // researchCostMultiplier = 4f;

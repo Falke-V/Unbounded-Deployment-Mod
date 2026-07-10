@@ -1,4 +1,4 @@
-package coremod;
+package unboundeddeployment.content.blocks;
 
 import arc.Core;
 import arc.graphics.g2d.*;
@@ -8,10 +8,10 @@ import mindustry.world.Tile;
 import mindustry.world.blocks.storage.CoreBlock;
 
 // class for cores with custom deployment schematic size limit
-public class CustomCoreBlock extends CoreBlock {
+public class UDCoreBlock extends CoreBlock {
     public int schematicLimit = 32;
 
-    public CustomCoreBlock(String name) {
+    public UDCoreBlock(String name) {
         super(name);
         this.hasColor = true;
     }
