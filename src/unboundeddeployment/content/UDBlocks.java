@@ -9,6 +9,7 @@ import mindustry.content.TechTree;
 import mindustry.content.Planets;
 import mindustry.world.Block;
 import unboundeddeployment.content.blocks.UDCoreBlock;
+import unboundeddeployment.content.UDUnitTypes;
 
 public class UDBlocks {
     public static Block coreCentrum;
@@ -27,7 +28,7 @@ public class UDBlocks {
             // for testing uncomment
             // requirements(Category.effect, new ItemStack[0]);
 
-            unitType = UnitTypes.gamma;
+            unitType = UDUnitTypes.delta;
             size = 5;
             health = 6000;
             itemCapacity = 13000;
