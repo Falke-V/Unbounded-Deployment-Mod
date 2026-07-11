@@ -6,8 +6,7 @@ author: "Falke-V"
 
 main: "unboundeddeployment.Main"
 
-description: 
-'''
+description: "
 Adds new Serpulo campaign core(s) with greater available deployment scheme sizes (no longer 15x15 maximum).
 Current list of new core(s) and characteristics:
 +----------------+---------+
@@ -15,12 +14,12 @@ Current list of new core(s) and characteristics:
 | Size           | 5x5     |
 | Capacity       | 13 000  |
 | Unit Limit     | +24     |
-| Core Unit      | Gamma   |
+| Core Unit      | Delta   |
 | Size of scheme | 19x19   |
 +----------------+---------+
-[green]new cores in development[]
-'''
+(new cores and units in development)
+"
 
-version: "1.0"
+version: "1.1"
 minGameVersion: "159.1"
 java: true
