@@ -10,16 +10,15 @@ import mindustry.content.*;
 import mindustry.graphics.*;
 import mindustry.gen.*;
 import mindustry.type.*;
+import unboundeddeployment.content.type.UDUnitType;
 
 public class UDUnitTypes{
     
-    //public static @EntityDef(value = {Unitc.class}, legacy = true) UnitType delta;
     public static UnitType delta;
-    //public static @EntityDef(value = {Unitc.class, Payloadc.class}, legacy = true) UnitType omega;
     
     public static void load(){
         //region core
-        delta = new UnitType("delta"){{
+        delta = new UDUnitType("delta"){{
             controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
             isEnemy = false;
 
@@ -36,16 +35,16 @@ public class UDUnitTypes{
             fogRadius = 0f;
             itemCapacity = 90;
             health = 300f;
-            engineOffset = 6f;
-            hitSize = 13f;
+            engineOffset = 8f;
+            hitSize = 11f;
 
             weapons.add(new Weapon("small-mount-weapon"){{
                 top = false;
-                reload = 14f;
-                x = 1f;
-                y = 4f;
+                reload = 10f;
+                x = 2.27f;
+                y = 1.7f;
                 shoot = new ShootSpread(){{
-                    shots = 3;
+                    shots = 2;
                     shotDelay = 3f;
                     spread = 2f;
                 }};
@@ -54,7 +53,7 @@ public class UDUnitTypes{
                 shootSound = Sounds.shootAlpha;
                 shootSoundVolume = 0.4f;
 
-                bullet = new LaserBoltBulletType(3.5f, 11){{
+                bullet = new LaserBoltBulletType(4.0f, 11){{
                     scaleKeepVelocity = true;
                     width = 1.5f;
                     height = 5f;
@@ -68,9 +67,9 @@ public class UDUnitTypes{
                     frontColor = Color.white;
                     lightColor = Pal.yellowBoltFront;
 
-                    lifetime = 70f;
+                    lifetime = 80f;
                     buildingDamageMultiplier = 0.01f;
-                    homingPower = 0.07f;
+                    homingPower = 0.05f;
                 }};
             }});
             weapons.add(new Weapon("unbounded-deployment-beam-weapon-3"){{
@@ -85,12 +84,12 @@ public class UDUnitTypes{
                 soundPitchMin = 2.0f;
 
                 bullet = new LaserBulletType(){{
-                    damage = 65f;
+                    damage = 25f;
                     recoil = 0f;
                     sideAngle = 0f;
                     sideWidth = 0f;
                     sideLength = 0f;
-                    length = 75f;
+                    length = 150f;
                     colors = new Color[]{Pal.yellowBoltFront.cpy().a(0.4f), Pal.yellowBoltFront, Color.white};
                     buildingDamageMultiplier = 0.02f;
                 }};
