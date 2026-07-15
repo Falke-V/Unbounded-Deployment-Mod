@@ -72,7 +72,7 @@ public class UDUnitTypes{
                     homingPower = 0.05f;
                 }};
             }});
-            weapons.add(new Weapon("unbounded-deployment-beam-weapon-3"){{
+            weapons.add(new Weapon("unbounded-deployment-small-beam-weapon"){{
                 top = false;
                 shake = 1.2f;
                 shootY = 4f;
