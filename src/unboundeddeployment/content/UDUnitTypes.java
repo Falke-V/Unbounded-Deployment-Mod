@@ -36,7 +36,7 @@ public class UDUnitTypes{
             itemCapacity = 90;
             health = 300f;
             engineOffset = 8f;
-            hitSize = 11f;
+            hitSize = 14f;
 
             weapons.add(new Weapon("small-mount-weapon"){{
                 top = false;

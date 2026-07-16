@@ -10,6 +10,7 @@ import arc.func.Boolf;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
 
+// class for mod-added units with icon generation
 public class UDUnitType extends UnitType {
     
     public UDUnitType(String name) {

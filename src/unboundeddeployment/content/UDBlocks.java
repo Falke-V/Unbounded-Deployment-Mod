@@ -29,7 +29,7 @@ public class UDBlocks {
             // requirements(Category.effect, new ItemStack[0]);
 
             unitType = UDUnitTypes.delta;
-            size = 5;
+            size = 6;
             health = 6000;
             itemCapacity = 13000;
             thrusterLength = 40/4f;
